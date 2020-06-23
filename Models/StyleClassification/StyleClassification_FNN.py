@@ -12,7 +12,7 @@ import os
 import keras.backend as K
 
 ### CNN - Style Classification Experiment
-class StyleClassification_CNN(object):
+class StyleClassification_FNN(object):
 
     def precision(self,y_true, y_pred):
          # Count positive samples.
@@ -126,5 +126,5 @@ class StyleClassification_CNN(object):
 
 # Iterate over folder of data files that are used in the evaluation
 for filename in os.listdir('REMOVED'):
-    obj = StyleClassification_CNN(filename)
+    obj = StyleClassification_FNN(filename)
     obj.processModel()
